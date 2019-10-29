@@ -21,8 +21,10 @@ warnings.filterwarnings('ignore')
 # %matplotlib inline
 plt.style.use('ggplot')
 
-train = pd.read_csv('E:\\IDEA Project\\Kaggle-HousePrices\\data\\train.csv')
-test = pd.read_csv('E:\\IDEA Project\\Kaggle-HousePrices\\data\\test.csv')
+train = pd.read_csv('..\\data\\train.csv')
+test = pd.read_csv('..\\data\\test.csv')
+
+
 plt.figure(num=1,figsize=(15,8))
 # sns.boxplot(train.YearBuilt, train.SalePrice[2000])
 
@@ -37,7 +39,7 @@ train.ix[train['YearBuilt'].isin([1995,2000]),'YearBuilt']
 # sns.boxplot(train.YearBuilt[train['YearBuilt'].isin(1995:2000)], train[train['YearBuilt'].isin([1995:2000])].SalePrice)
 
 sns.set_style("ticks")
-plt.show(1)
+plt.show()
 
 
 # plt.figure(num=2,figsize=(155,38))
