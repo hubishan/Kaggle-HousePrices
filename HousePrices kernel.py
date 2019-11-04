@@ -24,6 +24,8 @@ plt.style.use('ggplot')
 train = pd.read_csv('..\\data\\train.csv')
 test = pd.read_csv('..\\data\\test.csv')
 
+train = pd.read_csv('D:\IdeaProjects\Kaggle-HousePrices\data\train.csv\data\\train.csv')
+test = pd.read_csv('..\\data\\test.csv')
 
 plt.figure(num=1,figsize=(15,8))
 # sns.boxplot(train.YearBuilt, train.SalePrice[2000])
@@ -31,8 +33,8 @@ plt.figure(num=1,figsize=(15,8))
 sns.boxplot(train.YearBuilt[train['YearBuilt'] == 2000], train[train['YearBuilt'] == 2000].SalePrice)
 
 # 返回YearBuilt在[1995,2000]中的索引
-train[train['YearBuilt'].isin([1995,2000])].index
-
+index1=train[train['YearBuilt'].isin([1995,2000])].index
+index2=train.ix[train['YearBuilt'].isin([1995,2000]),'YearBuilt']
 
 sns.boxplot(train.YearBuilt[train[train['YearBuilt'].isin([1995,2000])].index], train.SalePrice[train[train['YearBuilt'].isin([1995,2000])].index])
 train.ix[train['YearBuilt'].isin([1995,2000]),'YearBuilt']
