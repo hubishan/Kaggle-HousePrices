@@ -14,7 +14,7 @@ import tensorflow_hub as hub
 
 # bert_module = hub.Module("https://tfhub.dev/google/bert_chinese_L-12_H-768_A-12/1", trainable=True)
 
-bert_module = hub.Module("D:\\data\\1")
+bert_module = hub.Module("D:\\data\\2")
 
 
 
